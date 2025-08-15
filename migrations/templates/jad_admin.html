@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAD Admin</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container my-4">
+        <h1 class="text-center">JAD Admin Dashboard</h1>
+        
+        <!-- Tab Navigation -->
+        <ul class="nav nav-tabs" id="jadTabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="dashboard-tab" data-bs-toggle="tab" href="#dashboard" role="tab" aria-controls="dashboard" aria-selected="true">Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="nmap-tab" data-bs-toggle="tab" href="#nmap" role="tab" aria-controls="nmap" aria-selected="false">Nmap Scan</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="nikto-tab" data-bs-toggle="tab" href="#nikto" role="tab" aria-controls="nikto" aria-selected="false">Nikto Scan</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="compliance-tab" data-bs-toggle="tab" href="#compliance" role="tab" aria-controls="compliance" aria-selected="false">Compliance Checks</a>
+            </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content mt-4">
+            <!-- Dashboard -->
+            <div class="tab-pane fade show active" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+                <h3>Audit Overview</h3>
+                <div>
+                    <!-- Insert Plotly Chart -->
+                    {{ graph_html|safe }}
+                </div>
+            </div>
+
+            <!-- Nmap Scan -->
+            <div class="tab-pane fade" id="nmap" role="tabpanel" aria-labelledby="nmap-tab">
+                <h3>Run Nmap Scan</h3>
+                <form method="POST" action="{% url 'run_nmap' %}">
+                    {% csrf_token %}
+                    <label for="target">Target:</label>
+                    <input type="text" name="target" id="target" class="form-control" required>
+                    <button type="submit" class="btn btn-primary mt-2">Scan</button>
+                </form>
+            </div>
+
+            <!-- Nikto Scan -->
+            <div class="tab-pane fade" id="nikto" role="tabpanel" aria-labelledby="nikto-tab">
+                <h3>Run Nikto Scan</h3>
+                <form method="POST" action="{% url 'run_nikto' %}">
+                    {% csrf_token %}
+                    <label for="target">Target:</label>
+                    <input type="text" name="target" id="target" class="form-control" required>
+                    <button type="submit" class="btn btn-primary mt-2">Scan</button>
+                </form>
+            </div>
+
+            <!-- Compliance Checks -->
+            <div class="tab-pane fade" id="compliance" role="tabpanel" aria-labelledby="compliance-tab">
+                <h3>Compliance Checks</h3>
+                <ul>
+                    <li><a href="{% url 'iso_27001' %}">ISO 27001</a></li>
+                    <li><a href="{% url 'nist' %}">NIST</a></li>
+                    <li><a href="{% url 'dppa' %}">DPPA</a></li>
+                    <li><a href="{% url 'cma' %}">CMA</a></li>
+                    <li><a href="{% url 'soc2' %}">SOC 2</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

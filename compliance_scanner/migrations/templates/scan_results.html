@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scan Results</title>
+</head>
+<body>
+    <h1>Scan Results</h1>
+    <pre>{{ output }}</pre>
+    <a href="{% url 'run_nmap' %}">Run another Nmap scan</a>
+    <a href="{% url 'run_nikto' %}">Run another Nikto scan</a>
+</body>
+</html>

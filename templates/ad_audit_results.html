@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Active Directory Audit Results</title>
+</head>
+<body>
+    <h1>Active Directory Audit Results</h1>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    {% if data %}
+        <ul>
+        {% for entry in data %}
+            <li>{{ entry }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No data available or an error occurred.</p>
+    {% endif %}
+</body>
+</html>

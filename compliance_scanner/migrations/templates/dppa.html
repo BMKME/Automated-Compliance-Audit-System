@@ -1,0 +1,19 @@
+<!-- dppa.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>DPPA Compliance Checklist</h2>
+<form method="POST">
+    {% csrf_token %}
+    <label>
+        <input type="checkbox" name="control_1"> Control 1: Data Collection Consent
+    </label><br>
+    <label>
+        <input type="checkbox" name="control_2"> Control 2: Data Protection Rights
+    </label><br>
+    <label>
+        <input type="checkbox" name="control_3"> Control 3: Data Breach Notifications
+    </label><br>
+    <!-- Add more controls here -->
+    <button type="submit">Generate Audit Report</button>
+</form>

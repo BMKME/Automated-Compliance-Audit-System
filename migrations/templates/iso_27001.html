@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>ISO 27001 Compliance Checklist</h2>
+<form method="POST">
+    {% csrf_token %}
+    <label>
+        <input type="checkbox" name="control_1"> Control 1: Information Security Policies
+    </label><br>
+    <label>
+        <input type="checkbox" name="control_2"> Control 2: Organization of Information Security
+    </label><br>
+    <label>
+        <input type="checkbox" name="control_3"> Control 3: Asset Management
+    </label><br>
+    <!-- Add more controls here -->
+    <button type="submit">Generate Audit Report</button>
+</form>
+{% endblock %}

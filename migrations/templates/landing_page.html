@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compliance Audit System - Landing Page</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="min-h-screen">
+        <!-- Navigation Bar -->
+        <nav class="bg-blue-600 text-white shadow-lg">
+            <div class="container mx-auto px-6 py-4">
+                <div class="flex items-center justify-between">
+                    <div class="text-xl font-bold">Compliance Audit System</div>
+                    <div class="space-x-4">
+                        <a href="{% url 'dashboard' %}" class="hover:text-gray-200">Dashboard</a>
+                        <a href="{% url 'compliance_scanner' %}" class="hover:text-gray-200">Scanner</a>
+                        <a href="{% url 'check_compliance' %}" class="hover:text-gray-200">Compliance</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="container mx-auto px-6 py-16">
+            <div class="text-center">
+                <h1 class="text-4xl font-bold text-gray-800 mb-4">Welcome to Compliance Audit System</h1>
+                <p class="text-gray-600 mb-8">Comprehensive security compliance monitoring and reporting</p>
+                <div class="space-x-4">
+                    <a href="{% url 'compliance_dashboard' %}" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">View Dashboard</a>
+                    <a href="{% url 'compliance_scanner' %}" class="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700">Start Scanning</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Grid -->
+        <div class="container mx-auto px-6 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-bold mb-4">Compliance Scanning</h3>
+                    <p class="text-gray-600">Run automated compliance scans using Nmap and Nikto</p>
+                    <a href="{% url 'run_nmap' %}" class="text-blue-600 hover:text-blue-800 mt-4 inline-block">Start Scan →</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-bold mb-4">AD Audit</h3>
+                    <p class="text-gray-600">Audit Active Directory configurations and security</p>
+                    <a href="{% url 'ad_audit' %}" class="text-blue-600 hover:text-blue-800 mt-4 inline-block">Run Audit →</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-bold mb-4">Reports</h3>
+                    <p class="text-gray-600">Generate detailed compliance reports in PDF and Excel formats</p>
+                    <a href="{% url 'generate_pdf' %}" class="text-blue-600 hover:text-blue-800 mt-4 inline-block">Generate Report →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

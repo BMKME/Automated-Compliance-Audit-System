@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Compliance Check</title>
+</head>
+<body>
+    <h1>Compliance Check</h1>
+    <p>Check compliance for a specific standard.</p>
+    <form method="post" action="{% url 'check_compliance' %}">
+        {% csrf_token %}
+        <label for="standard">Select a Standard:</label>
+        <select name="standard" id="standard">
+            <option value="ISO 27001">ISO 27001</option>
+            <option value="NIST">NIST</option>
+            <option value="DPPA">DPPA</option>
+            <option value="CMA">CMA</option>
+            <option value="SOC 2">SOC 2</option>
+        </select>
+        <button type="submit">Check Compliance</button>
+    </form>
+</body>
+</html>

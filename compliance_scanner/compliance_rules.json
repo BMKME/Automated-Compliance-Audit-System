@@ -1,0 +1,37 @@
+[
+    {"rule_name": "Access Control Policy", "description": "Ensure access control policies are documented and reviewed.", "framework": "ISO27001"},
+    {"rule_name": "Information Security Risk Assessment", "description": "Conduct regular risk assessments to identify and mitigate potential threats.", "framework": "ISO27001"},
+    {"rule_name": "Physical Security Controls", "description": "Implement physical access controls to safeguard sensitive areas.", "framework": "ISO27001"},
+    {"rule_name": "Supplier Relationships", "description": "Ensure third-party suppliers meet security requirements.", "framework": "ISO27001"},
+
+    {"rule_name": "Incident Response Plan", "description": "Maintain a documented incident response plan.", "framework": "NIST"},
+    {"rule_name": "Continuous Monitoring", "description": "Establish a process for continuous monitoring of security events.", "framework": "NIST"},
+    {"rule_name": "Access Control Standards", "description": "Define and enforce access control policies.", "framework": "NIST"},
+    {"rule_name": "Audit and Accountability", "description": "Log and monitor system activities to detect and respond to unauthorized actions.", "framework": "NIST"},
+
+    {"rule_name": "Data Retention Policy", "description": "Ensure data retention aligns with regulatory requirements.", "framework": "SOC2"},
+    {"rule_name": "System Availability Monitoring", "description": "Monitor system availability to meet SLAs and business continuity requirements.", "framework": "SOC2"},
+    {"rule_name": "Data Classification", "description": "Classify data based on its sensitivity and apply appropriate controls.", "framework": "SOC2"},
+    {"rule_name": "Vendor Management", "description": "Evaluate and monitor third-party service providers for security risks.", "framework": "SOC2"},
+
+    {"rule_name": "Encryption Standards", "description": "Ensure sensitive data is encrypted in transit and at rest.", "framework": "COBIT"},
+    {"rule_name": "IT Governance Framework", "description": "Define roles and responsibilities for IT governance.", "framework": "COBIT"},
+    {"rule_name": "Change Management", "description": "Establish change management policies to ensure system integrity.", "framework": "COBIT"},
+    {"rule_name": "Risk Management Process", "description": "Establish a systematic approach to identifying and managing risks.", "framework": "COBIT"},
+
+    {"rule_name": "Data Privacy Protection", "description": "Ensure compliance with local data privacy regulations.", "framework": "DPPA"},
+    {"rule_name": "Consent Management", "description": "Implement mechanisms for obtaining and managing user consent.", "framework": "DPPA"},
+    {"rule_name": "Personal Data Access", "description": "Restrict access to personal data to authorized personnel only.", "framework": "DPPA"},
+    {"rule_name": "Data Breach Notification", "description": "Ensure timely notification of data breaches to affected parties.", "framework": "DPPA"},
+
+    {"rule_name": "Prevent Unauthorized Access", "description": "Ensure measures to prevent unauthorized access to systems.", "framework": "CMA"},
+    {"rule_name": "System Integrity Monitoring", "description": "Regularly monitor system integrity to detect malicious activity.", "framework": "CMA"},
+    {"rule_name": "Logging and Auditing", "description": "Maintain logs of system activities for accountability.", "framework": "CMA"},
+    {"rule_name": "Prohibition of Cybercrime", "description": "Implement controls to detect and prevent cybercrimes.", "framework": "CMA"},
+    {"rule_name": "Risk Identification and Analysis", "description": "Identify and analyze risks using the OCTAVE methodology.", "framework": "OCTAVE"},
+    {"rule_name": "Asset Identification", "description": "Document and prioritize information assets as per OCTAVE.", "framework": "OCTAVE"},
+    {"rule_name": "Develop Protection Strategy", "description": "Develop and implement protection strategies for critical assets (OCTAVE).", "framework": "OCTAVE"},
+    {"rule_name": "GDPR Data Subject Rights", "description": "Ensure mechanisms for data subjects to exercise their GDPR rights.", "framework": "GDPR"},
+    {"rule_name": "GDPR Data Breach Notification", "description": "Notify authorities and affected individuals of data breaches as required by GDPR.", "framework": "GDPR"},
+    {"rule_name": "GDPR Data Minimization", "description": "Collect and process only the minimum personal data necessary (GDPR).", "framework": "GDPR"}
+]
